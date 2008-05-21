@@ -2,7 +2,7 @@
 ;;; Copyright (c) 2008, by AJ Rossini <blindglobe@gmail.com>
 ;;; ASDF packaging example
 ;;; License: BSD, 
-;;; Time-stamp: <2008-05-21 08:11:08 tony>
+;;; Time-stamp: <2008-05-21 08:34:27 tony>
 ;;; Created:    <2008-05-16 08:33:36 tony>
 
 (in-package :cl-user)
@@ -16,18 +16,22 @@
   :version #.(with-open-file
 		 (vers (merge-pathnames "version.lisp-expr"
 					*load-truename*)))
-  :name "asdfexamplecase"
+  :name "ASDF Example"
   :author "A.J. Rossini <blindglobe@gmail.com>"
   :license "BSD"
-  :description "ASDF Examplecase of complex directory scheme."
+  :description "ASDF example of a complex system definition using a complex directory scheme."
   :serial t
-  ;; :depends-on (:lift) ;;  :clem) not yet but soon!
-  :components ((:file "test1")
-	       (:file "test2" :depends-on ("test1"))
-
+  ;; :depends-on (:lift) ; non-real example of how ASDF dependencies...
+  :components (
+	       ;; FILES that exist, but are not part of the Lisp
+	       ;; program code.
 	       (:static-file "LICENSE")
 	       (:static-file "README")
 	       (:static-file "version" :pathname #p"version.lisp-expr")
+
+	       ;; Start of common lisp program 
+	       (:file "test1")
+	       (:file "test2" :depends-on ("test1"))
 
 	       ;; preparation for modulization...
 	       (:module
@@ -40,10 +44,9 @@
 	       (:module
 		"first-level-prime"
 		:pathname "src/"
-		:components ((:file "c")
-			     ;;(:file "c"
-				;;    :depends-on ("a"))
-			     ))
+		:components ((:file "a")
+			     (:file "c"
+				    :depends-on ("a"))))
 	       
 	       (:module
 		"second-level-one"
@@ -56,5 +59,3 @@
 		:components ((:file "two")
 			     (:file "three"
 				    :depends-on ("two"))))))
-
-

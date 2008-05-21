@@ -1,0 +1,32 @@
+ -*- mode:text -*-
+
+
+ASDF is a nifty system definition facility for Common Lisp that
+manages to cause confusion and nightmares for many people who have the
+misfoutrunate to be intrioduced to programming with a modern, narrowly
+implemented OS environment such as Microsoft, Unix/Linux, or the
+Macintosh.  
+
+Common Lisp separates the files containing program code from the
+loading into the programming language system in a way which is
+different from commonly used tools such as Java, C++, or Python.
+Those tools can link object heirarchies with the text files containing
+code which describe such objects.  Common Lisp has no such
+restriction, and this lack of restriction requires, for many, an eye
+opening change in how we view the programming paradigm.
+
+This toy package provides a silly example of a complex ASDF system, to
+use as a start for development and planning of a complex system
+environment.  The use of modules and subdirectories should help
+illustrate the flexibility and reuse possibilites of having the system
+definition language be implemented in a fully-featured programming
+language.  
+
+This work is the result of review of examples from many Open Source
+projects, and commonly found (as well as rare) paradigms have been
+lifted as patterns from the "open source ASDF literature".  
+
+Some people that must be acknowledged though they might not realize it
+include Cyrus Harmon, Gary King, and ....   Also, the IRC #lisp
+channel has provided lots of insight and clarification in answering
+the questions of others.
