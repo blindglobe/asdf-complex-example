@@ -1,5 +1,0 @@
-
-
-(in-package :testcase)
-
-(defvar my-one nil "silly var a")
