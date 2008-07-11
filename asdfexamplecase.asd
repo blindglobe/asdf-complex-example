@@ -2,7 +2,7 @@
 ;;; Copyright (c) 2008, by AJ Rossini <blindglobe@gmail.com>
 ;;; ASDF packaging example
 ;;; License: BSD, 
-;;; Time-stamp: <2008-05-21 08:34:27 tony>
+;;; Time-stamp: <2008-07-11 17:24:50 tony>
 ;;; Created:    <2008-05-16 08:33:36 tony>
 
 (in-package :cl-user)
@@ -34,28 +34,21 @@
 	       (:file "test2" :depends-on ("test1"))
 
 	       ;; preparation for modulization...
-	       (:module
-		"src"
-		:pathname "src/"
-		:components ((:file "a")
-			     (:file "b"
-				    :depends-on ("a"))))
+	       (:module	"src"
+			:pathname "src/"
+			:components ((:file "a")
+				     (:file "b" :depends-on ("a"))))
 	       
-	       (:module
-		"first-level-prime"
-		:pathname "src/"
-		:components ((:file "a")
-			     (:file "c"
-				    :depends-on ("a"))))
+	       (:module	"first-level-prime"
+			:pathname "src/"
+			:components ((:file "a")
+				     (:file "c" :depends-on ("a"))))
 	       
-	       (:module
-		"second-level-one"
-		:pathname "src/one/"
-		:components ((:file "one")))
+	       (:module	"second-level-one"
+			:pathname "src/one/"
+			:components ((:file "one")))
 	       
-	       (:module
-		"second-level-two"
-		:pathname "src/two/"
-		:components ((:file "two")
-			     (:file "three"
-				    :depends-on ("two"))))))
+	       (:module	"second-level-two"
+			:pathname "src/two/"
+			:components ((:file "two")
+				     (:file "three" :depends-on ("two"))))))
