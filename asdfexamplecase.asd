@@ -34,15 +34,17 @@
 	       (:file "test2" :depends-on ("test1"))
 
 	       ;; preparation for modulization...
-	       (:module	"src"
-			:pathname "src/"
-			:components ((:file "a")
-				     (:file "b" :depends-on ("a"))))
+	       (:module
+		"src"
+		:pathname "src/"
+		:components ((:file "a")
+			     (:file "b" :depends-on ("a"))))
 	       
-	       (:module	"first-level-prime"
-			:pathname "src/"
-			:components ((:file "a")
-				     (:file "c" :depends-on ("a"))))
+	       (:module
+		"first-level-prime"
+		:pathname "src/"
+		:components ((:file "a")
+			     (:file "c" :depends-on ("a"))))
 	       
 	       (:module	"second-level-one"
 			:pathname "src/one/"
