@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Need to upload to github
+desc: Should publicize as a helper for people needing to figure it out.
+type: :task
+component: asdf-testcase.git
+release: 
+reporter: AJ Rossini <blindglobe@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2010-01-02 15:14:29.738998 Z
+references: []
+
+id: ca293ac2f4eb0c00322b3da0cb7f8d0e0a093790
+log_events: 
+- - 2010-01-02 15:14:37.567351 Z
+  - AJ Rossini <blindglobe@gmail.com>
+  - created
+  - in progress, I hope.
